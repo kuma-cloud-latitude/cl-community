@@ -1,13 +1,15 @@
 package org.kukumama.devopsdaystaipei2024;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+
 class Devopsdaystaipei2024ApplicationTests {
 
     @Test
-    void contextLoads() {
+    void easy_test() {
+
+        Assertions.assertThat(1 + 1).isEqualTo(2);
     }
 
 }
