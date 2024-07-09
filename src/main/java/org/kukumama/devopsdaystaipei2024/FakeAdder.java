@@ -1,7 +1,7 @@
 package org.kukumama.devopsdaystaipei2024;
 
-public class Kukumama {
-    public Kukumama() {
+public class FakeAdder {
+    public FakeAdder() {
     }
 
     public int add(int a, int b) {
