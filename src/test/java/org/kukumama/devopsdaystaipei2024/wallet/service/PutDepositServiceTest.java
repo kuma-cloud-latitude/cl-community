@@ -4,6 +4,6 @@ import org.junit.jupiter.api.Test;
 
 class PutDepositServiceTest {
     @Test
-    void deposit_succssfully() {
+    void deposit_successfully() {
     }
 }
