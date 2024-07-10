@@ -8,5 +8,5 @@ import lombok.Data;
 public class Wallet {
 
     private long id;
-    private long balance;
+
 }
