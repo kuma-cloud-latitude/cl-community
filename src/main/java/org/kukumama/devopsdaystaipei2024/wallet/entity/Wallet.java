@@ -9,7 +9,7 @@ public class Wallet {
 
     private long id;
 
-    private long remaining; // Conflict
+    private long balance; // Conflict
 
     //test comment
 

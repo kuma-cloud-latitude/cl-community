@@ -40,6 +40,7 @@ class WalletServiceTest {
 
         // Assert
         verify(walletRepository).findById(walletId);
+        
 //        verify(walletRepository).updateBalance(eq(walletId), walletCaptor.capture());
 //        Wallet updatedWallet = walletCaptor.getValue();
 //        assertEquals(initialBalance + depositAmount, updatedWallet.getBalance());
