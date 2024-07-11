@@ -9,6 +9,5 @@ public class Wallet {
 
     private long id;
 
-    //test comment
-
+    private double balance;
 }
