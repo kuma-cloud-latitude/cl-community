@@ -24,7 +24,7 @@ public class InMemoryWalletRepository implements WalletRepository {
     public void updateBalance(long id, long newBalance) {
         Wallet wallet = wallets.get(id);
         if (wallet != null) {
-            wallet.setRemaining(newBalance);
+            wallet.setBalance(newBalance);
         }
     }
 }

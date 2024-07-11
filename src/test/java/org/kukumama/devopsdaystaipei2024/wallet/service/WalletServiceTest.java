@@ -1,5 +1,6 @@
 package org.kukumama.devopsdaystaipei2024.wallet.service;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
@@ -40,8 +41,22 @@ class WalletServiceTest {
 
         // Assert
         verify(walletRepository).findById(walletId);
+        
 //        verify(walletRepository).updateBalance(eq(walletId), walletCaptor.capture());
 //        Wallet updatedWallet = walletCaptor.getValue();
+
 //        assertEquals(initialBalance + depositAmount, updatedWallet.getBalance());
+    }
+
+    @Test
+    void test_transfer(){
+
+        Wallet fromWallet = new Wallet(1, 100);
+        Wallet toWallet = new Wallet(2, 200);
+
+        fromWallet.transfer(toWallet, 100);
+
+        Assertions.assertEquals(fromWallet.getBalance(), 0);
+        Assertions.assertEquals(toWallet.getBalance(), 300);
     }
 }
