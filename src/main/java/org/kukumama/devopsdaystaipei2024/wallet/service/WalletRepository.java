@@ -9,5 +9,5 @@ import java.util.Optional;
 public interface WalletRepository {
 
     Optional<Wallet> findById(long id);
-    void updateBalance(long id, double balance);
+    void updateBalance(long id, long balance);
 }

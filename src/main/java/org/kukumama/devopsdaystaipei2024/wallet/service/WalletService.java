@@ -13,9 +13,9 @@ public class WalletService {
         this.walletRepository = walletRepository;
     }
 
-    public void deposit(long id, double amount) {
+    public void deposit(long id, long amount) {
         walletRepository.findById(id).ifPresent(wallet -> {
-            double newBalance = wallet.getBalance() + amount;
+            long newBalance = wallet.getRemaining() + amount;
             walletRepository.updateBalance(id, newBalance);
         });
     }

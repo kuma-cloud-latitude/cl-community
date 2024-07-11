@@ -30,8 +30,8 @@ class WalletServiceTest {
     void deposit_successfully() {
         // Arrange
         long walletId = 1L;
-        double initialBalance = 100.0;
-        double depositAmount = 50.0;
+        long initialBalance = 100L;
+        long depositAmount = 50L;
         Wallet testWallet = new Wallet(walletId, initialBalance);
         when(walletRepository.findById(walletId)).thenReturn(Optional.of(testWallet));
 

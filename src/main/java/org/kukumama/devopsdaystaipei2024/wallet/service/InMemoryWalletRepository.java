@@ -11,8 +11,8 @@ public class InMemoryWalletRepository implements WalletRepository {
 
     static {
         // Initialize with some fake data
-        wallets.put(1L, new Wallet(1L, 100.0));
-        wallets.put(2L, new Wallet(2L, 150.0));
+        wallets.put(1L, new Wallet(1L, 100L));
+        wallets.put(2L, new Wallet(2L, 150L));
         // Add more fake wallets as needed
     }
 
@@ -21,10 +21,10 @@ public class InMemoryWalletRepository implements WalletRepository {
         return Optional.ofNullable(wallets.get(id));
     }
 
-    public void updateBalance(long id, double newBalance) {
+    public void updateBalance(long id, long newBalance) {
         Wallet wallet = wallets.get(id);
         if (wallet != null) {
-            wallet.setBalance(newBalance);
+            wallet.setRemaining(newBalance);
         }
     }
 }
