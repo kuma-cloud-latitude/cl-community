@@ -15,7 +15,7 @@ public class TransactionHistory {
 
     public TransactionHistory(Wallet wallet) {
         this.id = wallet.getId();
-        this.amount = wallet.getRemaining();
+        this.amount = wallet.getBalance();
         this.createdAt = new Timestamp(System.currentTimeMillis());
     }
 
