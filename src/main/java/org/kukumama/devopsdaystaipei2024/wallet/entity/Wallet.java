@@ -13,4 +13,9 @@ public class Wallet {
 
     //test comment
 
+    public void transfer(Wallet to, long amount) {
+        long remaining = this.balance - amount;;
+        to.setBalance(to.balance + amount);
+        this.balance = remaining;
+    }
 }
