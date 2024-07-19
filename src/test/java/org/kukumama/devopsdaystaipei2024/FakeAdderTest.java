@@ -14,13 +14,13 @@ class FakeAdderTest {
     void test_l() {
         Arg arg = new Arg();
         var result = arg.parse("run-server -l");
-        Assertions.assertThat(result).isTrue();
+        Assertions.assertThat(result.Log).isTrue();
     }
 
-//    @Test
-//    void test_p() {
-//        Arg arg = new Arg();
-//        var result = arg.parse("run-server -p 1234");
-//        Assertions.assertThat(result).isEqualTo("1234");
-//    }
+    @Test
+    void test_p() {
+        Arg arg = new Arg();
+        var result = arg.parse("run-server -p 1234");
+        Assertions.assertThat(result.Port).isEqualTo("1234");
+    }
 }
