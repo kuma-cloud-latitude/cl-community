@@ -4,6 +4,8 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 class FakeAdderTest {
 
     @Test
@@ -13,8 +15,8 @@ class FakeAdderTest {
 
     @Test
     @Disabled
-    void logExist(){
-        String[] args = new Command().parse("run-server -l");
-        Assertions.assertThat(args.length).isEqualTo(1);
+    void logExist() {
+        List<String> args = new Command().parse("run-server -l");
+        Assertions.assertThat(args.size()).isEqualTo(2);
     }
 }
