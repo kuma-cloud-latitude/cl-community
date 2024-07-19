@@ -19,6 +19,14 @@ class FakeAdderTest {
     }
 
     @Test
+    void test_l_not_exist() {
+        Arg arg = new Arg();
+        var result = arg.parse("run-server");
+        Assertions.assertThat(result.Log).isFalse();
+        Assertions.assertThat(result.Path).isEqualTo("");
+    }
+
+    @Test
     void test_d() {
         Arg arg = new Arg();
         var result = arg.parse("run-server -l -d /home/abc");

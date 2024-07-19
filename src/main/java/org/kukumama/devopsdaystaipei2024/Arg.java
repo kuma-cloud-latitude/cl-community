@@ -11,6 +11,10 @@ public class Arg {
         //  return "1234";
         //}
         var command = new Command();
+        command.Log = false;
+        command.Port = "8080";
+        command.Path = "";
+
         if (cmd.contains("-l")) {
             command.Log = true;
 
