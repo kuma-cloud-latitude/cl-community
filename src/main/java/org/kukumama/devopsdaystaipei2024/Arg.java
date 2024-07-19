@@ -13,7 +13,14 @@ public class Arg {
         var command = new Command();
         if (cmd.contains("-l")) {
             command.Log = true;
-            command.Path = "/usr/logs";
+
+            if (cmd.contains("-d")) {
+                String[] d_args = cmd.split("-d");
+                command.Path = d_args[1].trim();
+            }
+            else {
+                command.Path = "/usr/logs";
+            }
         }
         if (cmd.contains("-p")) {
             command.Port = "1234";

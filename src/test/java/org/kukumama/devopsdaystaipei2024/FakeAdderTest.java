@@ -18,14 +18,14 @@ class FakeAdderTest {
         Assertions.assertThat(result.Path).isEqualTo("/usr/logs");
     }
 
-//    @Test
-//    void test_d() {
-//        Arg arg = new Arg();
-//        var result = arg.parse("run-server -l -d /home/abc");
-//        Assertions.assertThat(result.Log).isTrue();
-//        Assertions.assertThat(result.Path).isEqualTo("/home/abc");
-//    }
-//
+    @Test
+    void test_d() {
+        Arg arg = new Arg();
+        var result = arg.parse("run-server -l -d /home/abc");
+        Assertions.assertThat(result.Log).isTrue();
+        Assertions.assertThat(result.Path).isEqualTo("/home/abc");
+    }
+
     @Test
     void test_p() {
         Arg arg = new Arg();
