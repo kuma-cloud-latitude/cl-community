@@ -1,7 +1,6 @@
 package org.kukumama.devopsdaystaipei2024;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -14,9 +13,10 @@ class FakeAdderTest {
     }
 
     @Test
-    @Disabled
     void logExist() {
         List<String> args = new Command().parse("run-server -l");
-        Assertions.assertThat(args.size()).isEqualTo(2);
+
+        Assertions.assertThat(args.contains("-l")).isTrue();
     }
+
 }
