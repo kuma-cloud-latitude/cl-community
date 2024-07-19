@@ -23,7 +23,10 @@ public class Arg {
             }
         }
         if (cmd.contains("-p")) {
-            command.Port = "1234";
+
+            String[] p_args = cmd.split("-p");
+
+            command.Port = p_args[1].trim();
         }
         return command;
     }
