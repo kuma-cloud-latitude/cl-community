@@ -16,4 +16,11 @@ class FakeAdderTest {
         var result = arg.parse("run-server -l");
         Assertions.assertThat(result).isTrue();
     }
+
+//    @Test
+//    void test_p() {
+//        Arg arg = new Arg();
+//        var result = arg.parse("run-server -p 1234");
+//        Assertions.assertThat(result).isEqualTo("1234");
+//    }
 }
