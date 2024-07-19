@@ -32,4 +32,12 @@ class FakeAdderTest {
         var result = arg.parse("run-server -p 1234");
         Assertions.assertThat(result.Port).isEqualTo("1234");
     }
+
+    @Test
+    void test_p_default() {
+        Arg arg = new Arg();
+        var result = arg.parse("run-server -p");
+        Assertions.assertThat(result.Port).isEqualTo("8080");
+    }
+
 }
