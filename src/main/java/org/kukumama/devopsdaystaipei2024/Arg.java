@@ -13,6 +13,7 @@ public class Arg {
         var command = new Command();
         if (cmd.contains("-l")) {
             command.Log = true;
+            command.Path = "/usr/logs";
         }
         if (cmd.contains("-p")) {
             command.Port = "1234";

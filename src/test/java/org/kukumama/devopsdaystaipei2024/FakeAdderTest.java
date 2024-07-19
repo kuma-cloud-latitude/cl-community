@@ -15,6 +15,7 @@ class FakeAdderTest {
         Arg arg = new Arg();
         var result = arg.parse("run-server -l");
         Assertions.assertThat(result.Log).isTrue();
+        Assertions.assertThat(result.Path).isEqualTo("/usr/logs");
     }
 
     @Test
